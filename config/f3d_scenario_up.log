@@ -1,0 +1,12 @@
+# StreamVersion 1.1
+ExposeEvent 0 279 0 0 0 0
+EnterEvent 400 440 0 0 0 0
+LeftButtonPressEvent 400 440 0 0 0 0
+StartInteractionEvent 400 440 0 0 0 0
+MouseMoveEvent 400 440 0 0 0 0
+InteractionEvent 400 440 0 0 0 0
+MouseMoveEvent 400 555 0 0 0 0
+InteractionEvent 400 555 0 0 0 0
+LeftButtonReleaseEvent 400 555 0 0 0 0
+EndInteractionEvent 400 555 0 0 0 0
+RenderEvent 400 555 0 0 0 0
