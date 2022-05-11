@@ -19,10 +19,7 @@ After running the converter, we end up with ~10k images for two view angles.
 
 2. Extract the features from images
 
-WIP
-
-I wrote test script for feature extraction using ORB. Need to test other feature extractors, like SURF SIFT etc. After
-choosing the best method for feature extraction, it would remain to do the processing on all the data
+TODO
 
 3. Construct the deep corelation classifier
 
