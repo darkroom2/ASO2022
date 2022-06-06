@@ -1,3 +1,6 @@
-.idea
-.venv
-venv
+.idea/
+.venv/
+venv/
+ModelNet10/
+output/
+.python-version

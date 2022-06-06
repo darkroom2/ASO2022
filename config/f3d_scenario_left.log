@@ -1,12 +1,12 @@
 # StreamVersion 1.1
 ExposeEvent 0 279 0 0 0 0
-EnterEvent 400 440 0 0 0 0
-LeftButtonPressEvent 400 440 0 0 0 0
-StartInteractionEvent 400 440 0 0 0 0
-MouseMoveEvent 400 440 0 0 0 0
-InteractionEvent 400 440 0 0 0 0
-MouseMoveEvent 300 600 0 0 0 0
-InteractionEvent 300 600 0 0 0 0
-LeftButtonReleaseEvent 300 600 0 0 0 0
-EndInteractionEvent 300 600 0 0 0 0
-RenderEvent 300 600 0 0 0 0
+EnterEvent 570 233 0 0 0 0
+LeftButtonPressEvent 570 233 0 0 0 0
+StartInteractionEvent 570 233 0 0 0 0
+MouseMoveEvent 570 233 0 0 0 0
+InteractionEvent 570 233 0 0 0 0
+MouseMoveEvent 208 233 0 0 0 0
+InteractionEvent 208 233 0 0 0 0
+LeftButtonReleaseEvent 208 233 0 0 0 0
+EndInteractionEvent 208 233 0 0 0 0
+RenderEvent 208 233 0 0 0 0

@@ -3,6 +3,8 @@ from multiprocessing import Pool
 from pathlib import Path
 from subprocess import call
 
+from tqdm import tqdm
+
 
 def modelnet_to_n_views(data_dir_path, output_dir_path, config_file_path, renderer_scenarios_paths):
     data_dir = Path(data_dir_path)
@@ -11,9 +13,10 @@ def modelnet_to_n_views(data_dir_path, output_dir_path, config_file_path, render
     for idx, scenario in enumerate(renderer_scenarios_paths):
         scenario_file = Path(scenario)
         with Pool() as pool:
+            files = list(data_dir.glob('**/*.off'))
             _run_f3d = partial(run_f3d, output_dir=output_dir, config_file=config_file, scenario_file=scenario_file,
                                name_suffix=f'_v{idx}')
-            pool.map(_run_f3d, data_dir.glob('**/*.off'))
+            list(tqdm(pool.imap_unordered(_run_f3d, files), total=len(files)))
 
 
 def run_f3d(file, output_dir, config_file, scenario_file, name_suffix=None):
@@ -28,10 +31,10 @@ def run_f3d(file, output_dir, config_file, scenario_file, name_suffix=None):
 
 
 def main():
-    data_dir_path = '/home/darkroom2/Downloads/ModelNet10/ModelNet10/'
-    output_dir_path = './output/'
-    config_file_path = './config/f3d_config.json'
-    renderer_scenarios_paths = ['./config/f3d_scenario_left.log', './config/f3d_scenario_up.log']
+    data_dir_path = 'ModelNet10/'
+    output_dir_path = 'output/'
+    config_file_path = 'config/f3d_config.json'
+    renderer_scenarios_paths = ['config/f3d_scenario_left.log', 'config/f3d_scenario_up.log']
 
     modelnet_to_n_views(data_dir_path, output_dir_path, config_file_path, renderer_scenarios_paths)
 
